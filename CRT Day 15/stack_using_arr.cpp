@@ -50,5 +50,24 @@ public:
             return -1; // Return -1 to indicate stack is empty
         }
     }
-
+    
 };
+
+int main()
+{
+    Stack s;
+    s.push(10);
+    s.push(20);
+    s.push(30);
+
+    cout << "Top element: " << s.peek() << endl; // Should print 30
+
+    s.pop();
+    cout << "Top element after pop: " << s.peek() << endl; // Should print 20
+
+    s.pop();
+    s.pop();
+    s.pop(); // This will cause stack underflow
+
+    return 0;
+}
